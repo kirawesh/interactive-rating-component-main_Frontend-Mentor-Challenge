@@ -1,0 +1,191 @@
+@import url(https://fonts.googleapis.com/css?family=Overpass:100,200,300,regular,500,600,700,800,900,100italic,200italic,300italic,italic,500italic,600italic,700italic,800italic,900italic);
+
+:root {
+    /* colors */
+    --pc-orange: hsl(25, 97%, 53%);
+    --nc-white: hsl(0, 0%, 100%);
+    --nc-lightGrey: hsl(217, 12%, 63%);
+    --nc-mediumGrey: hsl(216, 12%, 54%);
+    --nc-darkBlue: hsl(213, 19%, 18%);
+    --nc-veryDarkBlue: hsl(216, 12%, 8%);
+    --nc-blueGray: hsl(215, 18%, 22%);
+
+    /* fonts */
+    --ff-primary: 'Overpass',
+        sans-serif;
+    --fw-400: 400;
+    --fw-700: 700;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: none;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-400);
+}
+
+body {
+    background: var(--nc-veryDarkBlue);
+    display: grid;
+    align-items: center;
+    justify-items: center;
+    place-content: center;
+    min-height: 50rem;
+}
+
+.rating-state,
+.thank-you-state {
+    background: var(--nc-darkBlue);
+    width: 415px;
+    height: 415px;
+    border-radius: 1.875em;
+    display: grid;
+    gap: 1.5em;
+    align-items: center;
+    align-content: center;
+    padding: 2em;
+}
+
+/* items */
+
+.star-icon img {
+    background: var(--nc-blueGray);
+    width: 3.125em;
+    height: 3.125em;
+    border-radius: 100%;
+    align-items: center;
+    padding: 1em;
+}
+
+.title h1 {
+    color: var(--nc-white);
+    font-size: 1.8rem;
+    font-weight: var(--fw-700);
+}
+
+.title h2 {
+    color: var(--nc-lightGrey);
+    line-height: 1.5rem;
+    font-size: 1rem;
+    margin-top: 1em;
+}
+
+.rating-buttons,
+.submit-button {
+    text-align: center;
+}
+
+.rating-buttons {
+    display: grid;
+    grid-auto-flow: column;
+    justify-items: center;
+    justify-content: space-between;
+}
+
+.rating-number-button {
+    border: none;
+    border-radius: 100%;
+    background: var(--nc-blueGray);
+    padding: 1em;
+    width: 3.125em;
+    height: 3.125em;
+    color: var(--nc-lightGrey);
+    font-size: 1rem;
+    font-weight: var(--fw-700);
+    cursor: pointer;
+}
+
+.rating-number-button:hover {
+    background: var(--pc-orange);
+    color: var(--nc-white);
+}
+
+.rating-number-button:focus {
+    background: var(--nc-lightGrey);
+    color: var(--nc-white);
+}
+
+.submit-button-container {
+    display: grid;
+    align-items: center;
+    text-align: center;
+}
+
+.submit-button {
+    background-color: var(--pc-orange);
+    color: var(--nc-white);
+    font-family: var(--ff-primary);
+    font-weight: var(--fw-700);
+    font-size: 1rem;
+    letter-spacing: 0.06rem;
+    border: none;
+    border-radius: 1.875em;
+    padding: 0.8em 2em;
+    cursor: pointer;
+}
+
+.submit-button:hover {
+    background: var(--nc-white);
+    color: var(--pc-orange);
+}
+
+.hidden {
+    display: none;
+}
+
+.thank-you-state {
+    text-align: center;
+    align-content: center;
+    gap: 0.5em;
+    padding: 2.375em;
+}
+
+.thank-you-state .hero-image {
+    margin-bottom: 1em;
+}
+
+.selected-rate {
+    background: var(--nc-blueGray);
+    color: var(--pc-orange);
+    border-radius: 1.875em;
+    padding: .6em 1.1em;
+    margin: 0 auto;
+}
+
+.thank-you-state .title {
+    margin-top: 2em;
+}
+
+.thank-you-state .paragraph {
+    color: var(--nc-lightGrey);
+    font-size: 15px;
+    line-height: 1.5em;
+}
+
+.attribution {
+    font-size: 0.688rem;
+    margin: 5em auto 0;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    color: var(--pc-orange);
+}
+
+.attribution a {
+    color: hsl(0, 0%, 100%);
+}
+
+@media (max-width: 50em) {
+
+    body,
+    .rating-state,
+    .thank-you-state {
+        transform: scale(0.9); 
+    }
+    
+}
