@@ -41,8 +41,8 @@ body {
 .rating-state,
 .thank-you-state {
     background: var(--nc-darkBlue);
-    width: 415px;
-    height: 415px;
+    max-width: 25.9375rem;
+    /* max-height: 25.9375rem; */
     border-radius: 1.875em;
     display: grid;
     gap: 1.5em;
@@ -182,9 +182,13 @@ body {
 
 @media (max-width: 50em) {
 
+    body {
+        margin: 1.25rem;
+    }
     body,
     .rating-state,
     .thank-you-state {
+       
         transform: scale(0.9); 
     }
     
